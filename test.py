@@ -11,7 +11,7 @@ def index():
     # api= os.getenv("key")
     key = "472b405b8273df734d1dafb5b6d9cc2e"
     # location = input("enter city name:")
-    location="Kasganj"
+    location="nagpur"
     api_link = f"https://api.openweathermap.org/data/2.5/weather?q={location.lower()}&appid={key}"
     link = requests.get(api_link)
     api_data = link.json()
