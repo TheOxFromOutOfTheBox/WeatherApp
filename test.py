@@ -2,9 +2,10 @@ from flask import Flask,render_template
 from datetime import datetime
 import os
 import requests
-
+# from dotenv import load_dotenv
 
 app=Flask(__name__)
+# port = int(os.getenv('PORT'))
 
 @app.route("/")
 def index():
@@ -24,4 +25,3 @@ def index():
     # date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
     info={"location":location,"temperature":temp,"description":description,"humidity":humidity,"wind_speed":wind_speed,"feels_like":feels_like}
     return render_template("index.html",info=info)
-

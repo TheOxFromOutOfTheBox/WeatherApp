@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT app: test
+web: gunicorn -b :$PORT wsgi: test
